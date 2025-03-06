@@ -1,0 +1,24 @@
+LineWidth = 1.2;
+tra1 = out.positionpiaw;
+tra2 = out.positioncommand;
+tra3 = out.positionnoint;
+tra4 = out.positionnoaw;
+tra5 = out.positionaw;
+figure;
+plot3(tra1.Data(:,1), tra1.Data(:,2), tra1.Data(:,3),'LineWidth', LineWidth);
+hold on
+plot3(tra3.Data(:,1), tra3.Data(:,2), tra3.Data(:,3),'LineWidth', LineWidth);
+hold on; 
+plot3(tra2.Data(:,1), tra2.Data(:,2), tra2.Data(:,3), 'LineWidth',LineWidth );
+hold on;
+plot3(tra4.Data(:,1), tra4.Data(:,2), tra4.Data(:,3), 'LineWidth',LineWidth );
+hold on;
+plot3(tra5.Data(:,1), tra5.Data(:,2), tra5.Data(:,3), 'LineWidth',LineWidth );
+%title('Evolution of Actual Position');
+xlabel('X');
+ylabel('Y');
+zlabel('Z');
+grid on;
+legend('position with integral + pi aw','position command', 'position without integral + aw','position with integral','position with integral + aw');
+%legend('positon with integral controller aw','positon command','positon with integral controller no aw','positon with integral controller aw2');
+hold off;
